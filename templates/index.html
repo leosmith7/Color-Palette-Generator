@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Extractor</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        .custom-file-label {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Upload an Image to Extract Colors</h1>
+        <form action="/extract" method="post" enctype="multipart/form-data" class="mt-4">
+            <div class="form-group">
+                <div class="custom-file">
+                    <input type="file" name="image" id="image" accept="image/*" required class="custom-file-input">
+                    <label class="custom-file-label" for="image">Choose file</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+
+        <div id="results" class="mt-5">
+            <h2>Extracted Colors:</h2>
+            <!-- The extracted colors will be displayed here -->
+        </div>
+    </div>
+</body>
+</html>
